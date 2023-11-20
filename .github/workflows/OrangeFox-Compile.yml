@@ -104,7 +104,7 @@ jobs:
         set +e
         source build/envsetup.sh
         export ALLOW_MISSING_DEPENDENCIES=true
-        lunch omni_a30-eng
+        lunch twrp_a30-eng
         make recoveryimage -j$(nproc --all)
         ${{ steps.fox_branch.outputs.value }}
 
