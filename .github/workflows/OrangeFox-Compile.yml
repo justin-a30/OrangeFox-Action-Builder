@@ -104,7 +104,8 @@ jobs:
         set +e
         source build/envsetup.sh
         export ALLOW_MISSING_DEPENDENCIES=true
-        set -e
+        lunch omni_a30-eng
+        make recoveryimage -j$(nproc --all)
         ${{ steps.fox_branch.outputs.value }}
 
     - name: Set Build Date # For Build Date Info, currently using Asia/Manila
